@@ -1,0 +1,5 @@
+*.iml
+*.txt
+out/*
+.DS_Store
+.idea/
