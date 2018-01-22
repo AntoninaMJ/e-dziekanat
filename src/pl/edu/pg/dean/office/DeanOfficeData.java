@@ -28,7 +28,6 @@ public class DeanOfficeData {
         teachers = readTeachers();
         subjects = readSubjects();
         grades = readGrades(this);
-
     }
 
     public void saveData() throws IOException {
