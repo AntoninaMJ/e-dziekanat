@@ -3,6 +3,7 @@ package pl.edu.pg.dean.office.menu.methods.grade;
 import pl.edu.pg.dean.office.DeanOfficeData;
 import pl.edu.pg.dean.office.data.Grade;
 import pl.edu.pg.dean.office.data.person.Student;
+import pl.edu.pg.dean.office.menu.Menu;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -36,6 +37,8 @@ public class AverageGradeStudent {
                 if (average.isPresent()) {
                     System.out.println("Średnia ocena studenta: " + average.getAsDouble());
                 }
+            } else {
+                System.out.println("\nStudent o takim peselu nie istnieje. Spróbuj jeszcze raz.\n");
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

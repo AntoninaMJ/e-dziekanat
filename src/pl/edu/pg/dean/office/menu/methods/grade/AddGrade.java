@@ -5,6 +5,7 @@ import pl.edu.pg.dean.office.DeanOfficeData;
 import pl.edu.pg.dean.office.data.Grade;
 import pl.edu.pg.dean.office.data.person.Student;
 import pl.edu.pg.dean.office.data.person.Teacher;
+import pl.edu.pg.dean.office.menu.Menu;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -35,12 +36,11 @@ public class AddGrade {
             if (student != null && teacher != null && subject != null) {
                 Grade gradeToAdd = new Grade(grade, student, teacher, subject);
                 data.getGrades().add(gradeToAdd);
-                System.out.println(System.lineSeparator() + "Ocena pomyślnie dodana" + System.lineSeparator());
+                System.out.println("\nOcena pomyślnie dodana\n");
                 System.out.println(gradeToAdd);
             } else {
-                System.out.println("Złe dane, taki student, albo nauczyciel, albo przedmiot nie istnieje.");
+                System.out.println("Złe dane, taki student, albo nauczyciel, albo przedmiot nie istnieje. Spróbuj jeszcze raz\n");
             }
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -13,14 +13,15 @@ public class DeanOfficeMain {
 
         Menu menu = new Menu(data);
 
-        boolean result = menu.communication();
+        boolean result;
+
+        do {
+            result = menu.communication();
+        }
+        while (!result);
 
         data.saveData();
 
-        if (result) {
-            System.exit(0);
-        } else {
-            System.exit(1);
-        }
+        System.exit(0);
     }
 }

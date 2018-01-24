@@ -9,19 +9,22 @@ import pl.edu.pg.dean.office.data.person.Teacher;
 public class List {
 
     public static void list(DeanOfficeData data, MenuItem menuItem) {
-        if (menuItem == MenuItem.STUDENTS) {
-            for (Student student : data.getStudents()) {
-                System.out.println(student);
-            }
-        } else if (menuItem == MenuItem.TEACHERS) {
-            for (Teacher teacher : data.getTeachers()) {
-                System.out.println(teacher);
-
-            }
-        } else if (menuItem == MenuItem.SUBJECTS) {
-            for (Subject subject : data.getSubjects()) {
-                System.out.println(subject);
-            }
+        switch (menuItem) {
+            case STUDENTS:
+                for (Student student : data.getStudents()) {
+                    System.out.println(student);
+                }
+                break;
+            case TEACHERS:
+                for (Teacher teacher : data.getTeachers()) {
+                    System.out.println(teacher);
+                }
+                break;
+            case SUBJECTS:
+                for (Subject subject : data.getSubjects()) {
+                    System.out.println(subject);
+                }
+                break;
         }
     }
 }

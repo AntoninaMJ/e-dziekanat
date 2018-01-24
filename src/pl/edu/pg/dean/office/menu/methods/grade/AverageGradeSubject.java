@@ -4,6 +4,7 @@ import pl.edu.pg.dean.office.DeanOfficeData;
 import pl.edu.pg.dean.office.data.Grade;
 import pl.edu.pg.dean.office.data.Subject;
 import pl.edu.pg.dean.office.data.person.Student;
+import pl.edu.pg.dean.office.menu.Menu;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -39,7 +40,7 @@ public class AverageGradeSubject {
                 }
 
             } else {
-                System.out.println("Złe dane, taki przedmiot nie isnieje.");
+                System.out.println("\nPrzedmiot o takiej nazwie nie isnieje. Spróbuj jeszcze raz.\n");
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

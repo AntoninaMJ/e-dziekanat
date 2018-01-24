@@ -28,7 +28,6 @@ public class Menu {
             int inputMenu = Integer.parseInt(bufferedReader.readLine());
             if (inputMenu < 0 || inputMenu > 5) {
                 System.out.println("Wprowadziłeś złe dane, spróbuj jeszcze raz\r\n");
-                return false;
             } else if (inputMenu == 5) {
                 System.out.println("Wyszedłeś z programu\r\n");
                 return true;
@@ -37,18 +36,19 @@ public class Menu {
                 MenuItem menuItem = MenuItem.fromOption(inputMenu);
 
                 if (menuItem != MenuItem.GRADES) {
-                    return noGrades(menuItem);
+                    noGrades(menuItem);
                 } else {
-                    return grades();
+                    grades();
                 }
             }
         } catch (IOException ioe) {
             System.out.println("IO error trying to read your input!\r\n");
-            return false;
         }
+
+        return false;
     }
 
-    private boolean noGrades(MenuItem menuItem) {
+    private void noGrades(MenuItem menuItem) {
         System.out.println("Proszę wybrać sub menu dla wybranej opcji: ");
 
         for (SubMenuItem subMenuItem : SubMenuItem.values()) {
@@ -66,14 +66,12 @@ public class Menu {
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage() + System.lineSeparator());
             }
-            return true;
         } catch (IOException ioe) {
             System.out.println("IO error trying to read your input!\r\n");
-            return false;
         }
     }
 
-    private boolean grades() {
+    private void grades() {
         System.out.println("Proszę wybrać sub menu dla wybranej opcji: ");
 
         for (SubMenuItemGrades subMenuItemGrades : SubMenuItemGrades.values()) {
@@ -92,10 +90,8 @@ public class Menu {
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage() + System.lineSeparator());
             }
-            return true;
         } catch (IOException ioe) {
             System.out.println("IO error trying to read your input!\r\n");
-            return false;
         }
     }
 }

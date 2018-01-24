@@ -15,8 +15,8 @@ public enum SubMenuItem {
     EDIT("Zmienić", Edit::edit),
     DELETE("Usunąć", Delete::delete),
     LIST("Wyświetlić", List::list),
-    EXIT("Wyjście z programu", (data, menuItem) -> {
-        System.out.println("Wyjście z programu");
+    GO_BACK("Wyjście do głównego menu", (data, menuItem) -> {
+        System.out.println("Wyjście do głównego menu\n");
     });
 
     private String label;

@@ -15,8 +15,8 @@ public enum SubMenuItemGrades {
     LIST_GRADES("Wyświetlić", ListGrades::listGrades),
     AVERAGE_SUBJECT("Wyświetlić średnią po przedmiotach", AverageGradeSubject::averageGradeSubject),
     AVERAGE_STUDENT("Wyświetlić średnią po studentach", AverageGradeStudent::averageGradeStudent),
-    EXIT("Wyjście z programu", (data) -> {
-        System.out.println("Wyjście z programu");
+    GO_BACK("Wyjście do głównego menu", (data) -> {
+        System.out.println("Wyjście do głównego menu\n");
     });
 
     private String label;
