@@ -8,6 +8,7 @@ public enum MenuItem {
     TEACHERS("Nauczyciele"),
     SUBJECTS("Przedmioty"),
     GRADES("Oceny"),
+    STATISTICS("Statystyki"),
     EXIT("Wyjście z programu");
 
     private String label;

@@ -1,10 +1,7 @@
 package pl.edu.pg.dean.office.menu;
 
 import pl.edu.pg.dean.office.DeanOfficeData;
-import pl.edu.pg.dean.office.menu.methods.grade.AverageGradeStudent;
-import pl.edu.pg.dean.office.menu.methods.grade.AverageGradeSubject;
-import pl.edu.pg.dean.office.menu.methods.grade.AddGrade;
-import pl.edu.pg.dean.office.menu.methods.grade.ListGrades;
+import pl.edu.pg.dean.office.menu.methods.grade.*;
 
 import java.util.Arrays;
 import java.util.function.Consumer;
@@ -15,6 +12,7 @@ public enum SubMenuItemGrades {
     LIST_GRADES("Wyświetlić", ListGrades::listGrades),
     AVERAGE_SUBJECT("Wyświetlić średnią po przedmiotach", AverageGradeSubject::averageGradeSubject),
     AVERAGE_STUDENT("Wyświetlić średnią po studentach", AverageGradeStudent::averageGradeStudent),
+    AVERAGE_WEIGHTED("Wyświetl średnią ważoną", AverageWeighted::averageWeighted),
     GO_BACK("Wyjście do głównego menu", (data) -> {
         System.out.println("Wyjście do głównego menu\n");
     });

@@ -64,6 +64,9 @@ public class Edit {
                 case SUBJECTS:
                     System.out.println("Nie ma możliwości zmiany przedmiotu. Spróbuj dodać nowy.\n");
                     break;
+                case STATISTICS:
+                    System.out.println("\nNie dostępne dla statystyk. Spróbuj wyświetlić statystyki\n");
+                    break;
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

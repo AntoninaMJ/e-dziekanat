@@ -69,6 +69,9 @@ public class Add {
                         System.out.println("\nPrzedniot o takiej nazwie już istnieje. Spróbuj jeszcze raz.\n");
                     }
                     break;
+                case STATISTICS:
+                    System.out.println("\nNie dostępne dla statystyk. Spróbuj wyświetlić statystyki\n");
+                    break;
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

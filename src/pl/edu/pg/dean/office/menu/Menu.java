@@ -26,9 +26,9 @@ public class Menu {
 
         try {
             int inputMenu = Integer.parseInt(bufferedReader.readLine());
-            if (inputMenu < 0 || inputMenu > 5) {
+            if (inputMenu < 0 || inputMenu > 6) {
                 System.out.println("Wprowadziłeś złe dane, spróbuj jeszcze raz\r\n");
-            } else if (inputMenu == 5) {
+            } else if (inputMenu == 6) {
                 System.out.println("Wyszedłeś z programu\r\n");
                 return true;
             } else {

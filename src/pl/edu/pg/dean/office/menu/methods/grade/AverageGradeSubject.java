@@ -40,7 +40,7 @@ public class AverageGradeSubject {
                 }
 
             } else {
-                System.out.println("\nPrzedmiot o takiej nazwie nie isnieje. Spróbuj jeszcze raz.\n");
+                System.out.println("\nBrak ocen z przedmiotu.\n");
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

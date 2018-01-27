@@ -59,6 +59,9 @@ public class Delete {
                         System.out.println("Przedmiot pomyślnie usunięty.");
                     }
                     break;
+                case STATISTICS:
+                    System.out.println("\nNie dostępne dla statystyk. Spróbuj wyświetlić statystyki\n");
+                    break;
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
